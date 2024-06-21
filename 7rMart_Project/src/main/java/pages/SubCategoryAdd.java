@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import utilities.FileUpload;
+import utilities.FileUploadUtility;
 
 public class SubCategoryAdd {
 	WebDriver driver;
@@ -51,7 +51,7 @@ public class SubCategoryAdd {
 
 	public void imageupload(String image) {
 
-		FileUpload.fileUploadSendkey(images, image);
+		FileUploadUtility.fileUploadSendkey(images, image);
 	}
 
 	public void savedin() {

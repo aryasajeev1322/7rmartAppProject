@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utilities.FileUpload;
+import utilities.FileUploadUtility;
 
 public class ManagePageAddUser {
 
@@ -55,7 +55,7 @@ public class ManagePageAddUser {
 
 	public void choosefile(String location) {
 
-		FileUpload.fileUploadSendkey(choose_file, location);
+		FileUploadUtility.fileUploadSendkey(choose_file, location);
 	}
 
 	public void save_button() {

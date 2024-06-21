@@ -49,7 +49,7 @@ public class BaseClass {
 			throw new Exception("browser is not correct");
 		}
 
-		//driver.get("https://groceryapp.uniqassosiates.com/admin/login");
+		
 		driver.get(properties.getProperty("url"));
 		driver.manage().window().maximize();
 	}
