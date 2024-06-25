@@ -26,8 +26,8 @@ public class AdminUsersTest extends BaseClass {
 		AdminUsers manageuserpage = new AdminUsers(driver);
 		manageuserpage.manageUsers();
 		manageuserpage.search();
-		manageuserpage.entername(usernamevalue);
-		manageuserpage.selectUserType();
+		manageuserpage.entername( username);
+		manageuserpage.selectUserType(usertype );
 		manageuserpage.searchbutton();
 
 		boolean isUserFound = manageuserpage.isUserInSearchResults(username);

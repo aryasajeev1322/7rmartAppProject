@@ -39,7 +39,7 @@ public class AdminUsers {
 		uname.sendKeys("Zayn");
 	}
 
-	public void selectUserType() {
+	public void selectUserType(String user_type) {
 		Select select = new Select(usertype);
 		select.selectByIndex(1);
 	}
