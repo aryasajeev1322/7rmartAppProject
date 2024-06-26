@@ -11,20 +11,14 @@ import com.aventstack.extentreports.Status;
 
 import utilities.ExtendReportUtility;
 
-public class Listners implements ITestListener{
+public class Listners implements ITestListener {
 	ExtentTest test;
-
-
 
 	ExtentReports extent = ExtendReportUtility.createExtentReports();
 
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
-
-
 	public void onTestStart(ITestResult result) {
-
-
 
 		ITestListener.super.onTestStart(result);
 
@@ -32,27 +26,17 @@ public class Listners implements ITestListener{
 
 		extentTest.set(test);
 
-
-
 	}
 
-
-
 	public void onTestSuccess(ITestResult result) {
-
-
 
 		ITestListener.super.onTestSuccess(result);
 
 		extentTest.get().log(Status.PASS, "Test Passed");
 
-
-
 	}
 
 	public void onTestFailure(ITestResult result) {
-
-
 
 		ITestListener.super.onTestFailure(result);
 
@@ -72,33 +56,23 @@ public class Listners implements ITestListener{
 
 		} catch (IllegalArgumentException e) {
 
-
-
 			e.printStackTrace();
 
 		}
 
 		catch (IllegalAccessException e) {
 
-
-
 			e.printStackTrace();
 
 		} catch (NoSuchFieldException e) {
-
-
 
 			e.printStackTrace();
 
 		} catch (SecurityException e) {
 
-
-
 			e.printStackTrace();
 
 		}
-
-
 
 		try {
 
@@ -112,7 +86,7 @@ public class Listners implements ITestListener{
 
 	}
 
-public void onTestSkipped(ITestResult result) {
+	public void onTestSkipped(ITestResult result) {
 
 		ITestListener.super.onTestSkipped(result);
 
@@ -120,43 +94,27 @@ public void onTestSkipped(ITestResult result) {
 
 		String testMethodName = result.getMethod().getMethodName();
 
-
-
 	}
 
-
-
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-
-
 
 		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 
 	}
 
-public void onTestFailedWithTimeout(ITestResult result) {
-
-
+	public void onTestFailedWithTimeout(ITestResult result) {
 
 		ITestListener.super.onTestFailedWithTimeout(result);
 
 	}
 
-
-
 	public void onStart(ITestContext context) {
-
-
 
 		ITestListener.super.onStart(context);
 
 	}
 
-
-
 	public void onFinish(ITestContext context) {
-
-
 
 		ITestListener.super.onFinish(context);
 
